@@ -31,9 +31,9 @@
     <a class="mobile-nav-link" href="#milestones">Milestones</a>
     <a class="mobile-nav-link" href="#documents">Documents</a>
     <a class="mobile-nav-link" href="#presentations">Presentations</a>
-    <a class="mobile-nav-link" href="#team">Team</a>
-    <a class="mobile-nav-link" href="#contact">Contact</a>
-    <a class="mobile-live-btn" href="https://cattlesensesl.vercel.app/" target="_blank" rel="noopener noreferrer">View Live System &#8599;</a>
+    <a class="mobile-nav-link" href="#team">About Us</a>
+    <a class="mobile-nav-link" href="#contact">Contact Us</a>
+    <a class="mobile-live-btn" href="https://cattlesensesl.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
   </nav>
 </div>
 
@@ -49,15 +49,15 @@
       <a class="nav-link" href="#home">Home</a>
       <a class="nav-link" href="#domain">Domain</a>
       <a class="nav-link" href="#modules">Modules</a>
-      <a class="nav-link" href="#milestones">Milestones</a>
+      <div class="nav-drop"><a class="nav-link" href="#milestones">Milestones <span class="caret">&#9662;</span></a><div class="nav-drop-menu"><a href="#ms-proposal">Proposal Presentation &amp; Report<span>12%</span></a><a href="#ms-pp1">Progress Presentation I<span>15%</span></a><a href="#ms-pp2">Progress Presentation II<span>18%</span></a><a href="#ms-paper">Research Paper (published)<span>10%</span></a><a href="#ms-final">Final Presentation and VIVA<span>20%</span></a><a href="#ms-report">Final Report<span>19%</span></a><a href="#ms-website">Website<span>2%</span></a><a href="#ms-logbook">Research Logbook, Status Document 1 &amp; 2<span>4%</span></a></div></div>
       <a class="nav-link" href="#documents">Documents</a>
       <a class="nav-link" href="#presentations">Presentations</a>
-      <a class="nav-link" href="#team">Team</a>
-      <a class="nav-link" href="#contact">Contact</a>
+      <a class="nav-link" href="#team">About Us</a>
+      <a class="nav-link" href="#contact">Contact Us</a>
     </div>
     <div class="nav-actions">
       <label class="theme-btn" for="theme-toggle" title="Switch light / dark"><span class="icon-moon" aria-hidden="true">&#127769;</span><span class="icon-sun" aria-hidden="true">&#9728;</span></label>
-      <a href="https://cattlesensesl.vercel.app/" target="_blank" rel="noopener noreferrer" class="nav-live-btn">Live System &#8599;</a>
+      <a href="https://cattlesensesl.vercel.app/" target="_blank" rel="noopener noreferrer" class="nav-live-btn">Live Demo &#8599;</a>
       <a class="hamburger-btn" href="#menu" aria-label="Open navigation menu">&#9776;</a>
     </div>
   </nav>
@@ -77,10 +77,11 @@
           <p class="eyebrow">SLIIT Research Project &middot; R26-IT-045</p>
           <div class="hero-site-name">CattleSense</div>
           <h1 class="hero-title">Machine Learning Based Early Detection of Cattle Diseases</h1>
-          <p class="hero-desc">A web platform for Sri Lankan smallholder dairy farmers that screens cattle for four diseases from phone photos and simple farm measurements, explains the result, and produces a bilingual report for the veterinarian.</p>
+          <p class="hero-desc">A SLIIT final-year research project on using machine learning to help Sri Lankan smallholder dairy farmers screen their cattle early for four diseases, from phone photos and simple farm measurements.</p>
           <div class="hero-actions">
-            <a href="https://cattlesensesl.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="hero-live-link">View live system ↗</a>
-            <a class="btn btn-ghost" id="hero-explore-btn" href="#domain">Explore the research</a>
+            
+            <a class="btn btn-primary" id="hero-explore-btn" href="#domain">Explore the research</a>
+            <a href="https://cattlesensesl.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="hero-live-link">Live demo ↗</a>
           </div>
         </div>
         <!-- Right: Device Mockups -->
@@ -136,6 +137,12 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Abstract -->
+      <div class="hero-abstract">
+        <p class="hero-abstract-label">Abstract</p>
+        <p>Mastitis, foot-and-mouth disease (FMD), lumpy skin disease (LSD) and milk fever cause heavy losses on Sri Lankan smallholder dairy farms, and they are often noticed only after the signs are clear. This research studies how machine learning can support earlier screening using evidence a farmer can collect on the farm. Each disease has its own module: a ResNet50 udder image model with a milk biomarker decision tree for mastitis, EfficientNetB0 with clinical and weather rules for FMD, YOLOv8s and ResNet50 with a symptom checklist for LSD, and a Random Forest and XGBoost ensemble for milk fever. On held-out test data the modules reached 87.01% (mastitis image model), 94.1% (FMD), 93.10% (LSD) and 97.04% (milk fever) accuracy. The four modules were joined into one English and Sinhala web platform, and veterinarians who checked it found the results and reports useful.</p>
       </div>
 
       <!-- Stats Strip -->
@@ -408,7 +415,7 @@
             <span class="module-title">Mastitis</span>
             <span class="mod-tile-check" aria-hidden="true">&#10003;</span>
           </span>
-          <span class="module-owner">Perera L. C. C. &middot; IT22153036</span>
+          <span class="module-owner">Perera L. C. C.</span>
           <span class="module-desc">Reads an udder photo and five milk measurements, then gives a severity stage and a Grad-CAM heatmap that shows which part of the udder drove the result.</span>
           <span class="module-chips">
             <span class="chip chip-primary">ResNet50</span>
@@ -433,7 +440,7 @@
             <span class="module-title">Foot and Mouth Disease</span>
             <span class="mod-tile-check" aria-hidden="true">&#10003;</span>
           </span>
-          <span class="module-owner">Sudasinghe D. D. &middot; IT22129512</span>
+          <span class="module-owner">Sudasinghe D. D.</span>
           <span class="module-desc">Screens a lesion photo with EfficientNetB0 and adds clinical rules and live weather for the farmer&#x27;s district to estimate outbreak risk.</span>
           <span class="module-chips">
             <span class="chip chip-amber">EfficientNetB0</span>
@@ -457,7 +464,7 @@
             <span class="module-title">Lumpy Skin Disease</span>
             <span class="mod-tile-check" aria-hidden="true">&#10003;</span>
           </span>
-          <span class="module-owner">Manathunga M. A. A. S. &middot; IT22282422</span>
+          <span class="module-owner">Manathunga M. A. A. S.</span>
           <span class="module-desc">Finds skin nodules with YOLOv8s, checks them with a ResNet50 classifier and combines the photo result with clinical signs.</span>
           <span class="module-chips">
             <span class="chip chip-leaf">YOLOv8s</span>
@@ -481,7 +488,7 @@
             <span class="module-title">Milk Fever</span>
             <span class="mod-tile-check" aria-hidden="true">&#10003;</span>
           </span>
-          <span class="module-owner">Udawaththa M. P. A. M. &middot; IT22221728</span>
+          <span class="module-owner">Udawaththa M. P. A. M.</span>
           <span class="module-desc">A Random Forest and XGBoost ensemble stages milk fever risk around calving from simple herd information.</span>
           <span class="module-chips">
             <span class="chip chip-rose">Random Forest</span>
@@ -510,7 +517,7 @@
               <p class="mod-panel-kicker" style="color:var(--primary);">Module details</p>
               <h3 class="mod-panel-title">Mastitis</h3>
             </div>
-            <span class="module-owner">Perera L. C. C. &middot; IT22153036</span>
+            <span class="module-owner">Perera L. C. C.</span>
           </div>
           <div class="metric-readouts">
               <div class="metric-readout"><div class="metric-readout-value" style="color:var(--primary);">87.01%</div><div class="metric-readout-label">Image model accuracy</div></div>
@@ -549,7 +556,7 @@
               <p class="mod-panel-kicker" style="color:var(--heat-1);">Module details</p>
               <h3 class="mod-panel-title">Foot and Mouth Disease</h3>
             </div>
-            <span class="module-owner">Sudasinghe D. D. &middot; IT22129512</span>
+            <span class="module-owner">Sudasinghe D. D.</span>
           </div>
           <div class="metric-readouts">
               <div class="metric-readout"><div class="metric-readout-value" style="color:var(--heat-1);">94.1%</div><div class="metric-readout-label">Accuracy</div></div>
@@ -587,7 +594,7 @@
               <p class="mod-panel-kicker" style="color:var(--leaf);">Module details</p>
               <h3 class="mod-panel-title">Lumpy Skin Disease</h3>
             </div>
-            <span class="module-owner">Manathunga M. A. A. S. &middot; IT22282422</span>
+            <span class="module-owner">Manathunga M. A. A. S.</span>
           </div>
           <div class="metric-readouts">
               <div class="metric-readout"><div class="metric-readout-value" style="color:var(--leaf);">93.10%</div><div class="metric-readout-label">Classifier accuracy</div></div>
@@ -626,7 +633,7 @@
               <p class="mod-panel-kicker" style="color:var(--heat-2);">Module details</p>
               <h3 class="mod-panel-title">Milk Fever</h3>
             </div>
-            <span class="module-owner">Udawaththa M. P. A. M. &middot; IT22221728</span>
+            <span class="module-owner">Udawaththa M. P. A. M.</span>
           </div>
           <div class="metric-readouts">
               <div class="metric-readout"><div class="metric-readout-value" style="color:var(--heat-2);">97.04%</div><div class="metric-readout-label">Accuracy</div></div>
@@ -670,93 +677,157 @@
     <div class="content-width">
       <div class="reveal">
         <p class="eyebrow">04 / MILESTONES</p>
-        <h2 class="section-title" style="margin-bottom:48px;">Project Timeline</h2>
+        <h2 class="section-title" style="margin-bottom:12px;">Project Timeline</h2>
+        <p style="color:var(--ink-muted);max-width:620px;margin-bottom:32px;">Every assessment of the research project, with its date and the marks allocated. Open an assessment to see what was assessed.</p>
       </div>
-      <div class="timeline-wrapper" id="timeline-section">
-        <div class="timeline-line" aria-hidden="true">
-          <div class="timeline-fill"></div>
-        </div>
-        <ol class="timeline-list" aria-label="Project milestones">
-
-          <li class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">01</span></div>
-            <div class="timeline-item-left">
-              <div class="timeline-card reveal">
-                <div class="timeline-card-title">Project Proposal</div>
-                <div class="timeline-status-row timeline-status-end"><span class="chip chip-completed"><span class="chip-dot dot-green"></span>Completed</span></div>
-                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-end"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">March 2026</span></div></div>
+      <div class="ms-split" aria-label="Marks allocation"><span class="ms-seg ms-seg-done" style="flex:12" title="Proposal Presentation &amp; Report 12%"><b>12%</b><small>Proposal</small></span><span class="ms-seg ms-seg-done" style="flex:15" title="Progress Presentation I 15%"><b>15%</b><small>PP1</small></span><span class="ms-seg ms-seg-done" style="flex:18" title="Progress Presentation II 18%"><b>18%</b><small>PP2</small></span><span class="ms-seg ms-seg-submitted" style="flex:10" title="Research Paper (published) 10%"><b>10%</b><small>Paper</small></span><span class="ms-seg ms-seg-pending" style="flex:20" title="Final Presentation and VIVA 20%"><b>20%</b><small>Viva</small></span><span class="ms-seg ms-seg-ongoing" style="flex:19" title="Final Report 19%"><b>19%</b><small>Report</small></span><span class="ms-seg ms-seg-ongoing" style="flex:2" title="Website 2%"><b>2%</b><small>Web</small></span><span class="ms-seg ms-seg-ongoing" style="flex:4" title="Research Logbook, Status Document 1 &amp; 2 4%"><b>4%</b><small>Log</small></span></div>
+      <ol class="ms-list">
+          <li class="ms-item" id="ms-proposal">
+            <span class="ms-dot" aria-hidden="true">01</span>
+            <details class="ms-card">
+              <summary class="ms-sum">
+                <span class="ms-main">
+                  <span class="ms-title">Proposal Presentation &amp; Report</span>
+                  <span class="ms-meta"><span>March 2026</span><span class="chip chip-completed"><span class="chip-dot dot-green"></span>Completed</span></span>
+                </span>
+                <span class="ms-marks"><b>12%</b><small>of total marks</small></span>
+                <span class="ms-arrow" aria-hidden="true">&#9662;</span>
+              </summary>
+              <div class="ms-body">
+                <p>The research idea was presented to the panel together with the proposal report. It covered the background, the research gap and problem, the objectives, the planned methodology and the work split between the four members.</p>
+                <p class="ms-sub">Submitted / presented</p>
+                <ul><li>Proposal presentation (group)</li><li>Individual proposal reports</li><li>Project charter (TAF)</li></ul>
               </div>
-            </div>
+            </details>
           </li>
-
-          <li class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">02</span></div>
-            <div class="timeline-item-right">
-              <div class="timeline-card reveal">
-                <div class="timeline-card-title">Progress Presentation 1</div>
-                <div class="timeline-status-row timeline-status-start"><span class="chip chip-completed"><span class="chip-dot dot-green"></span>Completed</span></div>
-                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-start"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">May 2026</span></div></div>
+          <li class="ms-item" id="ms-pp1">
+            <span class="ms-dot" aria-hidden="true">02</span>
+            <details class="ms-card">
+              <summary class="ms-sum">
+                <span class="ms-main">
+                  <span class="ms-title">Progress Presentation I</span>
+                  <span class="ms-meta"><span>May 2026</span><span class="chip chip-completed"><span class="chip-dot dot-green"></span>Completed</span></span>
+                </span>
+                <span class="ms-marks"><b>15%</b><small>of total marks</small></span>
+                <span class="ms-arrow" aria-hidden="true">&#9662;</span>
+              </summary>
+              <div class="ms-body">
+                <p>First progress review. Each member showed the dataset, the pre-processing and the first trained model for their disease, along with the early results and the plan for the next stage.</p>
+                <p class="ms-sub">Submitted / presented</p>
+                <ul><li>Progress presentation 1 slides</li><li>Early model results for each module</li></ul>
               </div>
-            </div>
+            </details>
           </li>
-
-          <li class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">03</span></div>
-            <div class="timeline-item-left">
-              <div class="timeline-card reveal">
-                <div class="timeline-card-title">Progress Presentation 2</div>
-                <div class="timeline-status-row timeline-status-end"><span class="chip chip-completed"><span class="chip-dot dot-green"></span>Completed</span></div>
-                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-end"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">August 2026</span></div></div>
+          <li class="ms-item" id="ms-pp2">
+            <span class="ms-dot" aria-hidden="true">03</span>
+            <details class="ms-card">
+              <summary class="ms-sum">
+                <span class="ms-main">
+                  <span class="ms-title">Progress Presentation II</span>
+                  <span class="ms-meta"><span>August 2026</span><span class="chip chip-completed"><span class="chip-dot dot-green"></span>Completed</span></span>
+                </span>
+                <span class="ms-marks"><b>18%</b><small>of total marks</small></span>
+                <span class="ms-arrow" aria-hidden="true">&#9662;</span>
+              </summary>
+              <div class="ms-body">
+                <p>Second progress review. The final models, the hybrid decision logic of each module and the integrated CattleSense web platform were demonstrated.</p>
+                <p class="ms-sub">Submitted / presented</p>
+                <ul><li>Progress presentation 2 slides</li><li>Working integrated platform</li></ul>
               </div>
-            </div>
+            </details>
           </li>
-
-          <li class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">04</span></div>
-            <div class="timeline-item-right">
-              <div class="timeline-card reveal">
-                <div class="timeline-card-title">Research Paper</div>
-                <div class="timeline-status-row timeline-status-start"><span class="chip chip-completed"><span class="chip-dot dot-green"></span>Completed</span></div>
-                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-start"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">August 2026</span></div></div>
+          <li class="ms-item" id="ms-paper">
+            <span class="ms-dot" aria-hidden="true">04</span>
+            <details class="ms-card">
+              <summary class="ms-sum">
+                <span class="ms-main">
+                  <span class="ms-title">Research Paper (published)</span>
+                  <span class="ms-meta"><span>August 2026</span><span class="chip chip-pending"><span class="chip-dot dot-amber"></span>Submitted</span></span>
+                </span>
+                <span class="ms-marks"><b>10%</b><small>of total marks</small></span>
+                <span class="ms-arrow" aria-hidden="true">&#9662;</span>
+              </summary>
+              <div class="ms-body">
+                <p>Group research paper on the CattleSense platform. The paper has been written and submitted, and the decision on publication is still pending.</p>
+                <p class="ms-sub">Submitted / presented</p>
+                <ul><li>Group research paper</li></ul>
               </div>
-            </div>
+            </details>
           </li>
-
-          <li class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">05</span></div>
-            <div class="timeline-item-left">
-              <div class="timeline-card reveal">
-                <div class="timeline-card-title">Final Presentation and Viva</div>
-                <div class="timeline-status-row timeline-status-end"><span class="chip chip-pending"><span class="chip-dot dot-amber"></span>Pending</span></div>
-                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-end"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">October 2026 <span class="timeline-expected-badge">Expected</span></span></div></div>
+          <li class="ms-item" id="ms-final">
+            <span class="ms-dot" aria-hidden="true">05</span>
+            <details class="ms-card">
+              <summary class="ms-sum">
+                <span class="ms-main">
+                  <span class="ms-title">Final Presentation and VIVA</span>
+                  <span class="ms-meta"><span>October 2026</span><span class="chip chip-pending"><span class="chip-dot dot-amber"></span>Upcoming</span></span>
+                </span>
+                <span class="ms-marks"><b>20%</b><small>of total marks</small></span>
+                <span class="ms-arrow" aria-hidden="true">&#9662;</span>
+              </summary>
+              <div class="ms-body">
+                <p>Final presentation and demonstration of the complete system, followed by the viva on the research work of each member.</p>
+                <p class="ms-sub">Submitted / presented</p>
+                <ul><li>Final presentation</li><li>System demonstration</li><li>Individual viva</li></ul>
               </div>
-            </div>
+            </details>
           </li>
-
-          <li class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">06</span></div>
-            <div class="timeline-item-right">
-              <div class="timeline-card reveal">
-                <div class="timeline-card-title">Final Report</div>
-                <div class="timeline-status-row timeline-status-start"><span class="chip chip-pending"><span class="chip-dot dot-amber"></span>Pending</span></div>
-                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-start"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">October 2026 <span class="timeline-expected-badge">Expected</span></span></div></div>
+          <li class="ms-item" id="ms-report">
+            <span class="ms-dot" aria-hidden="true">06</span>
+            <details class="ms-card">
+              <summary class="ms-sum">
+                <span class="ms-main">
+                  <span class="ms-title">Final Report</span>
+                  <span class="ms-meta"><span>October 2026</span><span class="chip chip-pending"><span class="chip-dot dot-amber"></span>Ongoing</span></span>
+                </span>
+                <span class="ms-marks"><b>19%</b><small>of total marks</small></span>
+                <span class="ms-arrow" aria-hidden="true">&#9662;</span>
+              </summary>
+              <div class="ms-body">
+                <p>The common group report and the individual final thesis of each member, covering the full research work and results.</p>
+                <p class="ms-sub">Submitted / presented</p>
+                <ul><li>Common final report</li><li>Four individual final theses</li></ul>
               </div>
-            </div>
+            </details>
           </li>
-
-          <li class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">07</span></div>
-            <div class="timeline-item-left">
-              <div class="timeline-card reveal">
-                <div class="timeline-card-title">Website</div>
-                <div class="timeline-status-row timeline-status-end"><span class="chip chip-pending"><span class="chip-dot dot-amber"></span>Pending</span></div>
-                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-end"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">October 2026 <span class="timeline-expected-badge">Expected</span></span></div></div>
+          <li class="ms-item" id="ms-website">
+            <span class="ms-dot" aria-hidden="true">07</span>
+            <details class="ms-card">
+              <summary class="ms-sum">
+                <span class="ms-main">
+                  <span class="ms-title">Website</span>
+                  <span class="ms-meta"><span>October 2026</span><span class="chip chip-pending"><span class="chip-dot dot-amber"></span>Ongoing</span></span>
+                </span>
+                <span class="ms-marks"><b>2%</b><small>of total marks</small></span>
+                <span class="ms-arrow" aria-hidden="true">&#9662;</span>
+              </summary>
+              <div class="ms-body">
+                <p>This academic information website, which documents the research, methodology, findings and all project documents. The website viva is held on the same day as the final presentation.</p>
+                <p class="ms-sub">Submitted / presented</p>
+                <ul><li>Project website source code</li><li>Website viva</li></ul>
               </div>
-            </div>
+            </details>
           </li>
-
-        </ol>
-      </div>
+          <li class="ms-item" id="ms-logbook">
+            <span class="ms-dot" aria-hidden="true">08</span>
+            <details class="ms-card">
+              <summary class="ms-sum">
+                <span class="ms-main">
+                  <span class="ms-title">Research Logbook, Status Document 1 &amp; 2</span>
+                  <span class="ms-meta"><span>Throughout the project</span><span class="chip chip-pending"><span class="chip-dot dot-amber"></span>Ongoing</span></span>
+                </span>
+                <span class="ms-marks"><b>4%</b><small>of total marks</small></span>
+                <span class="ms-arrow" aria-hidden="true">&#9662;</span>
+              </summary>
+              <div class="ms-body">
+                <p>The research logbook kept during the project, and the two status documents that report the progress of the work.</p>
+                <p class="ms-sub">Submitted / presented</p>
+                <ul><li>Research logbook</li><li>Status document 1</li><li>Status document 2</li></ul>
+              </div>
+            </details>
+          </li>
+      </ol>
+      <p class="ms-note">Total: 100%.</p>
     </div>
   </section>
 
@@ -784,7 +855,7 @@
               <p class="file-desc">Topic Assessment Form (TAF) with the scope, objectives and plan of the project.</p>
             </div>
           </div>
-          <a href="PASTE_DRIVE_LINK_TAF" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="download-project-charter">Open on Drive &#8599;</a>
+          <a href="https://drive.google.com/file/d/1Erpe5kmSzKX6D-6KN6EW9uJsCQCXNhNi/view?usp=share_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="download-project-charter">Open on Drive &#8599;</a>
         </div>
 
         <div class="file-card file-card-available reveal">
@@ -833,19 +904,19 @@
           <button class="btn btn-ghost" disabled id="download-final-reports">Pending</button>
         </div>
 
-        <div class="file-card file-card-pending reveal">
+        <div class="file-card file-card-available reveal">
           <div class="file-card-body">
             <div class="file-icon" style="background:rgba(239,68,68,0.08);color:var(--heat-2);">📄</div>
             <div>
               <div class="file-title">Research Paper</div>
               <div class="file-badges">
                 <span class="file-badge" style="background:rgba(239,68,68,0.08);color:var(--heat-2);">PDF</span>
-                <span class="chip chip-pending" style="font-size:0.65rem;padding:2px 6px;"><span class="chip-dot dot-amber"></span>Pending</span>
+                <span class="chip chip-completed" style="font-size:0.65rem;padding:2px 6px;"><span class="chip-dot dot-green"></span>Available</span>
               </div>
-              <p class="file-desc">Group research paper on the CattleSense platform.</p>
+              <p class="file-desc">Group research paper on the CattleSense platform, submitted in August 2026.</p>
             </div>
           </div>
-          <button class="btn btn-ghost" disabled id="download-research-paper">Pending</button>
+          <a href="https://drive.google.com/file/d/1AIz6u5voTwcwtndmW89slmAeh7wkb4pE/view?usp=share_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="download-research-paper">Open on Drive &#8599;</a>
         </div>
 
       </div>
@@ -1051,6 +1122,13 @@
         </div>
 
       </div>
+      <!-- Relevant information -->
+      <p class="team-section-label" style="margin-top:40px;">Project Highlights</p>
+      <div class="highlights-grid">
+        <div class="highlight-card"><span class="highlight-icon" aria-hidden="true">&#128196;</span><div><b>Group research paper</b><p>Written and submitted in August 2026.</p></div></div>
+        <div class="highlight-card"><span class="highlight-icon" aria-hidden="true">&#127760;</span><div><b>Live platform</b><p>All four modules deployed in one English and Sinhala web app.</p></div></div>
+        <div class="highlight-card"><span class="highlight-icon" aria-hidden="true">&#129658;</span><div><b>Field visits</b><p>Domain knowledge gathered from veterinarians and farmers, and the system shown to them.</p></div></div>
+      </div>
     </div>
   </section>
 
@@ -1060,7 +1138,7 @@
   <section id="contact" class="section-py">
     <div class="content-width">
       <div class="reveal">
-        <p class="eyebrow">08 / CONTACT</p>
+        <p class="eyebrow">08 / CONTACT US</p>
         <h2 class="section-title" style="margin-bottom:40px;">Get in Touch</h2>
       </div>
 
@@ -1143,8 +1221,8 @@
           <a class="footer-link" href="#milestones">Milestones</a>
           <a class="footer-link" href="#documents">Documents</a>
           <a class="footer-link" href="#presentations">Presentations</a>
-          <a class="footer-link" href="#team">Team</a>
-          <a class="footer-link" href="#contact">Contact</a>
+          <a class="footer-link" href="#team">About Us</a>
+          <a class="footer-link" href="#contact">Contact Us</a>
         </nav>
       </div>
       <div>
