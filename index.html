@@ -1,0 +1,1165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CattleSense: ML-Based Early Detection of Cattle Diseases | SLIIT</title>
+  <meta name="description" content="CattleSense is a machine learning platform for early detection of cattle diseases (Mastitis, FMD, LSD, and Milk Fever) built for Sri Lankan smallholder dairy farmers." />
+  <meta property="og:title" content="CattleSense: Machine Learning Based Early Detection of Cattle Diseases" />
+  <meta property="og:description" content="A web platform for Sri Lankan smallholder dairy farmers that screens cattle for four diseases from phone photos, with bilingual reporting." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cattlesensesl.vercel.app/" />
+  <meta name="theme-color" content="#0F766E" />
+  <link rel="icon" type="image/png" href="cs-logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Theme switch: a hidden checkbox, styled with CSS only -->
+<input type="checkbox" id="theme-toggle" class="sr-only" aria-label="Dark mode" />
+
+<!-- Scroll Progress Bar (CSS scroll timeline, shows only in browsers that support it) -->
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- Mobile Menu: opens with #menu (CSS :target), any link closes it -->
+<div class="mobile-menu" id="menu" aria-label="Mobile navigation">
+  <a class="mobile-menu-close" href="#close" aria-label="Close navigation menu">&#10005;</a>
+  <nav aria-label="Mobile navigation">
+    <a class="mobile-nav-link" href="#home">Home</a>
+    <a class="mobile-nav-link" href="#domain">Domain</a>
+    <a class="mobile-nav-link" href="#modules">Modules</a>
+    <a class="mobile-nav-link" href="#milestones">Milestones</a>
+    <a class="mobile-nav-link" href="#documents">Documents</a>
+    <a class="mobile-nav-link" href="#presentations">Presentations</a>
+    <a class="mobile-nav-link" href="#team">Team</a>
+    <a class="mobile-nav-link" href="#contact">Contact</a>
+    <a class="mobile-live-btn" href="https://cattlesensesl.vercel.app/" target="_blank" rel="noopener noreferrer">View Live System &#8599;</a>
+  </nav>
+</div>
+
+<!-- Navbar -->
+<header id="navbar">
+  <a href="#main-content" class="sr-only">Skip to content</a>
+  <nav class="content-width nav-inner" aria-label="Main navigation">
+    <a href="#home" class="nav-logo" aria-label="Go to home">
+      <img src="cs-logo.png" alt="CattleSense logo" class="nav-logo-img" />
+      <span class="nav-logo-text">Cattle<span>Sense</span></span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="#home">Home</a>
+      <a class="nav-link" href="#domain">Domain</a>
+      <a class="nav-link" href="#modules">Modules</a>
+      <a class="nav-link" href="#milestones">Milestones</a>
+      <a class="nav-link" href="#documents">Documents</a>
+      <a class="nav-link" href="#presentations">Presentations</a>
+      <a class="nav-link" href="#team">Team</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <label class="theme-btn" for="theme-toggle" title="Switch light / dark"><span class="icon-moon" aria-hidden="true">&#127769;</span><span class="icon-sun" aria-hidden="true">&#9728;</span></label>
+      <a href="https://cattlesensesl.vercel.app/" target="_blank" rel="noopener noreferrer" class="nav-live-btn">Live System &#8599;</a>
+      <a class="hamburger-btn" href="#menu" aria-label="Open navigation menu">&#9776;</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <!-- =========================================================
+       HERO SECTION
+       ========================================================= -->
+  <section id="home" class="topo-bg">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="content-width" style="width:100%; margin-top: auto;">
+      <div class="hero-grid">
+        <!-- Left: Text -->
+        <div class="reveal" style="max-width: 576px;">
+          <p class="eyebrow">SLIIT Research Project &middot; R26-IT-045</p>
+          <div class="hero-site-name">CattleSense</div>
+          <h1 class="hero-title">Machine Learning Based Early Detection of Cattle Diseases</h1>
+          <p class="hero-desc">A web platform for Sri Lankan smallholder dairy farmers that screens cattle for four diseases from phone photos and simple farm measurements, explains the result, and produces a bilingual report for the veterinarian.</p>
+          <div class="hero-actions">
+            <a href="https://cattlesensesl.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="hero-live-link">View live system ↗</a>
+            <a class="btn btn-ghost" id="hero-explore-btn" href="#domain">Explore the research</a>
+          </div>
+        </div>
+        <!-- Right: Device Mockups -->
+        <div class="hero-device-wrap reveal">
+          <div class="hero-devices">
+            <div class="device-glow" aria-hidden="true"></div>
+            <!-- MacBook Pro Mockup -->
+            <div class="macbook-wrap">
+              <div class="macbook-lid">
+                <div class="macbook-notch" aria-hidden="true"></div>
+                <div class="macbook-screen">
+                  <div class="macbook-toolbar" aria-hidden="true">
+                    <div class="traffic-lights">
+                      <div class="traffic-light tl-red"></div>
+                      <div class="traffic-light tl-yellow"></div>
+                      <div class="traffic-light tl-green"></div>
+                    </div>
+                    <a href="https://cattlesensesl.vercel.app/" target="_blank" rel="noopener noreferrer" class="macbook-url">
+                      <span style="color:#2dd4bf;font-size:7px;">🔒</span>
+                      <span>cattlesensesl.vercel.app</span>
+                    </a>
+                    <div style="width:40px;"></div>
+                  </div>
+                  <div class="macbook-screenshot">
+                    <img src="assets/images/hero.png" alt="CattleSense Desktop Web App Interface" loading="eager" />
+                    <div class="macbook-glare" aria-hidden="true"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="macbook-base-wrap">
+                <div class="macbook-base"><div class="macbook-scoop"></div></div>
+                <div class="macbook-shadow" aria-hidden="true"></div>
+              </div>
+            </div>
+            <!-- iPhone 15 Pro Mockup -->
+            <div class="iphone-wrap">
+              <div class="iphone-chassis">
+                <div class="iphone-screen">
+                  <div class="iphone-statusbar" aria-hidden="true">
+                    <span class="iphone-time">9:41</span>
+                    <div class="iphone-island"></div>
+                    <span style="color:rgba(255,255,255,0.9);font-size:7px;">●●●</span>
+                  </div>
+                  <div class="iphone-screenshot">
+                    <img src="assets/images/app-mobile.png" alt="CattleSense Mobile Web App" loading="eager" />
+                    <div class="iphone-glare" aria-hidden="true"></div>
+                  </div>
+                  <div class="iphone-bottom-bar" aria-hidden="true">
+                    <div class="iphone-home-bar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Strip -->
+      <div class="hero-stats">
+        <div class="hero-stat-card reveal"><div class="hero-stat-value">4</div><div class="hero-stat-label">Diseases</div></div>
+        <div class="hero-stat-card reveal"><div class="hero-stat-value">4</div><div class="hero-stat-label">ML Modules</div></div>
+        <div class="hero-stat-card reveal"><div class="hero-stat-value">2</div><div class="hero-stat-label">Languages</div></div>
+        <div class="hero-stat-card reveal"><div class="hero-stat-value">1</div><div class="hero-stat-label">Platform</div></div>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <a class="scroll-cue" href="#domain" aria-label="Scroll down to research domain">
+      <span>SCROLL</span>
+      <span class="scroll-cue-chevron">▼</span>
+    </a>
+  </section>
+
+  <!-- =========================================================
+       DOMAIN SECTION
+       ========================================================= -->
+  <section id="domain" class="section-py topo-bg">
+    <div class="content-width">
+      <div class="reveal">
+        <p class="eyebrow">02 / DOMAIN</p>
+        <h2 class="section-title" style="margin-bottom: 40px;">Research Context</h2>
+      </div>
+
+      <!-- Tabs work with radio buttons + CSS only (no JavaScript) -->
+      <input class="tab-radio" type="radio" name="domain-tab" id="tab-literature" checked />
+      <input class="tab-radio" type="radio" name="domain-tab" id="tab-gap" />
+      <input class="tab-radio" type="radio" name="domain-tab" id="tab-problem" />
+      <input class="tab-radio" type="radio" name="domain-tab" id="tab-objective" />
+      <input class="tab-radio" type="radio" name="domain-tab" id="tab-subobjectives" />
+      <input class="tab-radio" type="radio" name="domain-tab" id="tab-methodology" />
+      <input class="tab-radio" type="radio" name="domain-tab" id="tab-tools" />
+
+      <div class="domain-layout">
+        <aside class="domain-sidenav" aria-label="Domain sub-navigation">
+          <nav>
+            <label class="domain-tab" for="tab-literature">Literature Survey</label>
+            <label class="domain-tab" for="tab-gap">Research Gap</label>
+            <label class="domain-tab" for="tab-problem">Research Problem</label>
+            <label class="domain-tab" for="tab-objective">Main Objective</label>
+            <label class="domain-tab" for="tab-subobjectives">Sub-Objectives</label>
+            <label class="domain-tab" for="tab-methodology">Methodology</label>
+            <label class="domain-tab" for="tab-tools">Tools &amp; Frameworks</label>
+          </nav>
+        </aside>
+
+        <div class="domain-content">
+
+          <!-- Literature Survey -->
+          <div class="panel" id="panel-literature">
+            <h3 class="panel-heading">Literature Survey</h3>
+            <p class="panel-text">Most dairy cattle in Sri Lanka are kept on small family farms. Mastitis is the most costly dairy disease worldwide, and subclinical mastitis is common in the main milk-producing areas of the country. Foot-and-mouth disease and lumpy skin disease spread quickly through a herd, and lumpy skin disease is now notifiable in Sri Lanka. Milk fever appears around calving and can kill a cow within hours if it is not treated.</p>
+            <p class="panel-text" style="margin-top:14px;">Published studies show that convolutional neural networks can recognise udder inflammation, mouth lesions and skin nodules from photographs, and that tree-based models can predict disease from simple measurements. Most of this work covers one disease and one type of data, often depends on thermal cameras, sensors or laboratory values, and stops before a tool that a farmer can actually use.</p>
+          </div>
+
+          <!-- Research Gap -->
+          <div class="panel" id="panel-gap">
+            <h3 class="panel-heading">Research Gap</h3>
+            <p style="color:var(--ink-muted);line-height:1.75;margin-bottom:24px;">Representative studies from our literature review compared with CattleSense:</p>
+            <div class="gap-table-wrap">
+              <table class="gap-table" aria-label="Research gap comparison table">
+                <thead>
+                  <tr>
+                    <th>Study</th>
+                    <th>Diseases</th>
+                    <th>Farmer inputs only</th>
+                    <th>Image + other evidence</th>
+                    <th>Explains result</th>
+                    <th>Local language</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Wang et al., 2022</td><td class="gap-txt">Mastitis</td><td><span class="x-icon">&#10007;</span></td><td><span class="x-icon">&#10007;</span></td><td><span class="x-icon">&#10007;</span></td><td><span class="x-icon">&#10007;</span></td></tr>
+                  <tr><td>Pan et al., 2025</td><td class="gap-txt">Mastitis</td><td><span class="x-icon">&#10007;</span></td><td><span class="x-icon">&#10007;</span></td><td class="gap-txt">Not reported</td><td><span class="x-icon">&#10007;</span></td></tr>
+                  <tr><td>Hadi et al., 2024</td><td class="gap-txt">FMD</td><td><span class="check-icon">&#10003;</span></td><td><span class="x-icon">&#10007;</span></td><td><span class="x-icon">&#10007;</span></td><td class="gap-txt">Not reported</td></tr>
+                  <tr><td>Ayon et al., 2026</td><td class="gap-txt">FMD, LSD</td><td><span class="check-icon">&#10003;</span></td><td><span class="x-icon">&#10007;</span></td><td class="gap-txt">Not reported</td><td><span class="x-icon">&#10007;</span></td></tr>
+                  <tr class="gap-us"><td>CattleSense</td><td class="gap-txt">All four</td><td><span class="check-icon">&#10003;</span></td><td><span class="check-icon">&#10003;</span></td><td><span class="check-icon">&#10003;</span></td><td><span class="check-icon">&#10003;</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Research Problem -->
+          <div class="panel" id="panel-problem">
+            <h3 class="panel-heading">Research Problem</h3>
+            <p class="panel-text">Smallholder dairy farmers in Sri Lanka have no low-cost way to screen their cattle for mastitis, FMD, LSD and milk fever on the day they first suspect a problem. These diseases are usually recognised only when the signs are obvious. By then milk has been lost, treatment is harder and, for the two contagious diseases, other animals may already be infected.</p>
+          </div>
+
+          <!-- Main Objective -->
+          <div class="panel" id="panel-objective">
+            <h3 class="panel-heading">Main Objective</h3>
+            <p class="panel-text">To design, build and evaluate an integrated, machine learning based web platform that helps Sri Lankan smallholder dairy farmers screen their cattle early for mastitis, FMD, LSD and milk fever, using only evidence they can collect on the farm, and to present each result with an explanation and practical next steps.</p>
+          </div>
+
+          <!-- Sub-Objectives -->
+          <div class="panel" id="panel-subobjectives">
+            <h3 class="panel-heading">Sub-Objectives</h3>
+            <div class="subobjectives-grid">
+              <div class="subobjective-card">
+                <div class="subobjective-header"><div class="subobjective-num">01</div><span class="subobjective-module">Mastitis</span></div>
+                <p class="subobjective-text">Fuse a ResNet50 udder image model with a decision tree on milk biomarkers, explain the image result with Grad-CAM and stage the severity of each case.</p>
+              </div>
+              <div class="subobjective-card">
+                <div class="subobjective-header"><div class="subobjective-num">02</div><span class="subobjective-module">Foot and Mouth Disease</span></div>
+                <p class="subobjective-text">Classify lesion photographs with EfficientNetB0 and add clinical rules and a weather-based outbreak risk for the farmer's district.</p>
+              </div>
+              <div class="subobjective-card">
+                <div class="subobjective-header"><div class="subobjective-num">03</div><span class="subobjective-module">Lumpy Skin Disease</span></div>
+                <p class="subobjective-text">Detect skin nodules with YOLOv8s, classify them with ResNet50 and combine the photo result with clinical signs.</p>
+              </div>
+              <div class="subobjective-card">
+                <div class="subobjective-header"><div class="subobjective-num">04</div><span class="subobjective-module">Milk Fever</span></div>
+                <p class="subobjective-text">Stage the risk of milk fever around calving from herd management information with a Random Forest and XGBoost ensemble.</p>
+              </div>
+              <div class="subobjective-card subobjective-wide">
+                <div class="subobjective-header"><div class="subobjective-num">05</div><span class="subobjective-module">Shared Platform</span></div>
+                <p class="subobjective-text">Bring the four modules together behind one login, one cattle register and one detection history, in English and Sinhala.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Methodology -->
+          <div class="panel" id="panel-methodology">
+            <h3 class="panel-heading">Methodology</h3>
+            <p style="color:var(--ink-muted);line-height:1.8;margin-bottom:32px;">Each module pairs a trained model for the strongest evidence with a second source of evidence that a farmer can collect, joined by a hybrid layer whose rules are written down and tested. Every model was evaluated on a held-out test set that was not used for training. The four modules run as separate Flask services behind one API gateway, so each member could train and redeploy their own model without affecting the others.</p>
+
+            <div class="ml-pipeline">
+              <p class="ml-pipeline-title">Workflow followed by each module</p>
+              <div class="pipeline-steps">
+                <div class="pipeline-step"><div class="pipeline-step-box">Data collection</div><span class="pipeline-arrow">&#8594;</span></div>
+                <div class="pipeline-step"><div class="pipeline-step-box">Pre-processing &amp; augmentation</div><span class="pipeline-arrow">&#8594;</span></div>
+                <div class="pipeline-step"><div class="pipeline-step-box">Model training</div><span class="pipeline-arrow">&#8594;</span></div>
+                <div class="pipeline-step"><div class="pipeline-step-box">Held-out testing</div><span class="pipeline-arrow">&#8594;</span></div>
+                <div class="pipeline-step"><div class="pipeline-step-box">Hybrid fusion</div><span class="pipeline-arrow">&#8594;</span></div>
+                <div class="pipeline-step"><div class="pipeline-step-box">Flask service</div><span class="pipeline-arrow">&#8594;</span></div>
+                <div class="pipeline-step"><div class="pipeline-step-box">Live web app</div></div>
+              </div>
+            </div>
+
+            <!-- System Architecture (inline SVG, colours follow the light/dark theme) -->
+            <p class="arch-title">System Architecture</p>
+            <figure class="arch-figure">
+              <div class="arch-scroll">
+                <svg class="arch-svg" viewBox="0 0 800 600" role="img" aria-labelledby="arch-t arch-d">
+                  <title id="arch-t">CattleSense system architecture</title>
+                  <desc id="arch-d">The farmer uses the React web app on Vercel. API calls go through Nginx to the Flask API gateway on AWS EC2, which forwards each check to one of four disease services, saves results in Neon PostgreSQL and sends OTP emails. The FMD service reads weather from Open-Meteo.</desc>
+                  <defs>
+                    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="a-head"/></marker>
+                  </defs>
+
+                  <g class="a-node"><rect x="290" y="10" width="220" height="44" rx="10"/><text x="400" y="37">Farmer / Vet / Admin</text></g>
+                  <g class="a-node a-front"><rect x="230" y="84" width="340" height="56" rx="10"/><text x="400" y="108">React web app on Vercel</text><text class="a-sub" x="400" y="128">React 18 · Vite · Tailwind · English / Sinhala</text></g>
+                  <text class="a-lbl" x="410" y="164">HTTPS · /api requests</text>
+
+                  <rect class="a-zone" x="14" y="178" width="772" height="312" rx="14"/>
+                  <text class="a-zone-t" x="30" y="200">AWS EC2 · Docker Compose</text>
+
+                  <g class="a-node a-gate"><rect x="300" y="210" width="200" height="44" rx="10"/><text x="400" y="237">Nginx · port 80</text></g>
+                  <g class="a-node a-gate"><rect x="34" y="278" width="736" height="52" rx="10"/><text x="402" y="300">Flask API gateway · port 5001</text><text class="a-sub" x="402" y="319">JWT login · cow ownership check · cows · milk yield · module proxy · history · dashboard · admin</text></g>
+
+                  <g class="a-svc s-mas"><rect x="34" y="370" width="172" height="96" rx="10"/><text x="120" y="394">Mastitis</text><text class="a-sub" x="120" y="413">port 5002</text><text class="a-sub" x="120" y="433">ResNet50 + Decision Tree</text><text class="a-sub" x="120" y="451">Grad-CAM</text></g>
+                  <g class="a-svc s-lsd"><rect x="222" y="370" width="172" height="96" rx="10"/><text x="308" y="394">Lumpy Skin</text><text class="a-sub" x="308" y="413">port 5003</text><text class="a-sub" x="308" y="433">YOLOv8s + ResNet50</text><text class="a-sub" x="308" y="451">70% photo · 30% signs</text></g>
+                  <g class="a-svc s-mf"><rect x="410" y="370" width="172" height="96" rx="10"/><text x="496" y="394">Milk Fever</text><text class="a-sub" x="496" y="413">port 5004</text><text class="a-sub" x="496" y="433">Random Forest + XGBoost</text><text class="a-sub" x="496" y="451">THI heat adjustment</text></g>
+                  <g class="a-svc s-fmd"><rect x="598" y="370" width="172" height="96" rx="10"/><text x="684" y="394">FMD</text><text class="a-sub" x="684" y="413">port 5005</text><text class="a-sub" x="684" y="433">EfficientNetB0</text><text class="a-sub" x="684" y="451">clinical + weather rules</text></g>
+
+                  <g class="a-node a-ext"><rect x="34" y="520" width="172" height="70" rx="10"/><text x="120" y="550">Email service</text><text class="a-sub" x="120" y="570">password reset OTP</text></g>
+                  <g class="a-node a-db"><rect x="252" y="520" width="300" height="70" rx="10"/><text x="402" y="545">Neon PostgreSQL (cloud)</text><text class="a-sub" x="402" y="564">users · cows · milk_yield · detection_logs</text><text class="a-sub" x="402" y="580">mastitis_assessments · follow-ups · admin</text></g>
+                  <g class="a-node a-ext"><rect x="598" y="520" width="172" height="70" rx="10"/><text x="684" y="550">Open-Meteo</text><text class="a-sub" x="684" y="570">live weather API</text></g>
+
+                  <g class="a-lines">
+                    <path d="M400 54 V82" marker-end="url(#arw)"/>
+                    <path d="M400 140 V208" marker-end="url(#arw)"/>
+                    <path d="M400 254 V276" marker-end="url(#arw)"/>
+                    <path d="M120 330 V368" marker-end="url(#arw)"/>
+                    <path d="M308 330 V368" marker-end="url(#arw)"/>
+                    <path d="M496 330 V368" marker-end="url(#arw)"/>
+                    <path d="M684 330 V368" marker-end="url(#arw)"/>
+                    <path class="a-dash" d="M402 330 V518" marker-end="url(#arw)"/>
+                    <path class="a-dash" d="M34 304 H23 V555 H32" marker-end="url(#arw)"/>
+                    <path d="M684 466 V518" marker-end="url(#arw)"/>
+                  </g>
+                  <text class="a-lbl" x="410" y="508">saves every result</text>
+                  <text class="a-lbl" x="692" y="508">weather data</text>
+                  <text class="a-lbl" x="34" y="508">OTP email</text>
+                </svg>
+              </div>
+              <figcaption>The web app only talks to the gateway. The gateway checks the login and the cow owner, forwards each check to the right disease service and saves the result in the shared database.</figcaption>
+            </figure>
+          </div>
+
+          <!-- Tools & Frameworks -->
+          <div class="panel" id="panel-tools">
+            <h3 class="panel-heading">Tools &amp; Frameworks</h3>
+            <div class="tools-group">
+              <p class="tools-group-label">Frontend</p>
+              <div class="tools-chips">
+                <span class="chip chip-primary">React 18</span>
+                <span class="chip chip-primary">Vite</span>
+                <span class="chip chip-primary">Tailwind CSS</span>
+                <span class="chip chip-primary">English / Sinhala translations</span>
+              </div>
+            </div>
+            <div class="tools-group">
+              <p class="tools-group-label">Backend</p>
+              <div class="tools-chips">
+                <span class="chip chip-amber">Python</span>
+                <span class="chip chip-amber">Flask microservices</span>
+                <span class="chip chip-amber">JWT authentication</span>
+                <span class="chip chip-amber">ReportLab / fpdf2 (PDF reports)</span>
+              </div>
+            </div>
+            <div class="tools-group">
+              <p class="tools-group-label">Machine Learning</p>
+              <div class="tools-chips">
+                <span class="chip chip-leaf">TensorFlow / Keras</span>
+                <span class="chip chip-leaf">Ultralytics YOLOv8</span>
+                <span class="chip chip-leaf">scikit-learn</span>
+                <span class="chip chip-leaf">XGBoost</span>
+                <span class="chip chip-leaf">Grad-CAM</span>
+              </div>
+            </div>
+            <div class="tools-group">
+              <p class="tools-group-label">Data</p>
+              <div class="tools-chips">
+                <span class="chip chip-rose">Neon PostgreSQL</span>
+                <span class="chip chip-rose">Open-Meteo API</span>
+              </div>
+            </div>
+            <div class="tools-group">
+              <p class="tools-group-label">Deployment</p>
+              <div class="tools-chips">
+                <span class="chip chip-default">Docker Compose</span>
+                <span class="chip chip-default">Nginx</span>
+                <span class="chip chip-default">AWS EC2</span>
+                <span class="chip chip-default">Vercel</span>
+                <span class="chip chip-default">Git / GitHub</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end domain-content -->
+      </div><!-- end domain-layout -->
+    </div>
+  </section>
+
+  <!-- =========================================================
+       MODULES SECTION
+       ========================================================= -->
+  <section id="modules" class="section-py">
+    <div class="content-width">
+      <div class="reveal">
+        <p class="eyebrow">03 / MODULES</p>
+        <h2 class="section-title" style="margin-bottom:12px;">Disease Focus</h2>
+        <p style="color:var(--ink-muted);max-width:620px;margin-bottom:40px;">Four ML modules, one for each disease, each built by one member. All results are on held-out test data. Select a disease to see its inputs, logic and output.</p>
+      </div>
+
+      <!-- Module selector: radio buttons + CSS only -->
+      <input class="tab-radio" type="radio" name="module-tab" id="mod-mastitis" checked />
+      <input class="tab-radio" type="radio" name="module-tab" id="mod-fmd" />
+      <input class="tab-radio" type="radio" name="module-tab" id="mod-lsd" />
+      <input class="tab-radio" type="radio" name="module-tab" id="mod-milk-fever" />
+
+      <div class="mod-tiles">
+        <label class="mod-tile" for="mod-mastitis" style="--mc:var(--primary); background:rgba(15,118,110,0.06); border-color:rgba(15,118,110,0.18);">
+          <span class="mod-tile-top">
+            <span class="module-title">Mastitis</span>
+            <span class="mod-tile-check" aria-hidden="true">&#10003;</span>
+          </span>
+          <span class="module-owner">Perera L. C. C. &middot; IT22153036</span>
+          <span class="module-desc">Reads an udder photo and five milk measurements, then gives a severity stage and a Grad-CAM heatmap that shows which part of the udder drove the result.</span>
+          <span class="module-chips">
+            <span class="chip chip-primary">ResNet50</span>
+            <span class="chip chip-primary">Decision Tree</span>
+            <span class="chip chip-primary">Grad-CAM</span>
+            <span class="chip chip-primary">Soft voting</span>
+          </span>
+          <span class="module-metrics">
+            <div class="metric-bar-wrap">
+              <div class="metric-bar-header"><span class="metric-bar-label">Image model accuracy</span><span class="metric-bar-value">87.01%</span></div>
+              <div class="metric-bar-track"><div class="metric-bar-fill" style="width:87.01%;background:var(--primary);"></div></div>
+            </div>
+            <div class="metric-bar-wrap">
+              <div class="metric-bar-header"><span class="metric-bar-label">Image model ROC-AUC</span><span class="metric-bar-value">0.9376</span></div>
+              <div class="metric-bar-track"><div class="metric-bar-fill" style="width:93.76%;background:var(--primary);"></div></div>
+            </div>
+          </span>
+          <span class="mod-tile-cta"><span class="cta-off">View details &#8595;</span><span class="cta-on">Showing below &#8595;</span></span>
+        </label>
+        <label class="mod-tile" for="mod-fmd" style="--mc:var(--heat-1); background:rgba(245,158,11,0.06); border-color:rgba(245,158,11,0.18);">
+          <span class="mod-tile-top">
+            <span class="module-title">Foot and Mouth Disease</span>
+            <span class="mod-tile-check" aria-hidden="true">&#10003;</span>
+          </span>
+          <span class="module-owner">Sudasinghe D. D. &middot; IT22129512</span>
+          <span class="module-desc">Screens a lesion photo with EfficientNetB0 and adds clinical rules and live weather for the farmer&#x27;s district to estimate outbreak risk.</span>
+          <span class="module-chips">
+            <span class="chip chip-amber">EfficientNetB0</span>
+            <span class="chip chip-amber">Clinical rules</span>
+            <span class="chip chip-amber">Open-Meteo weather</span>
+          </span>
+          <span class="module-metrics">
+            <div class="metric-bar-wrap">
+              <div class="metric-bar-header"><span class="metric-bar-label">Accuracy</span><span class="metric-bar-value">94.1%</span></div>
+              <div class="metric-bar-track"><div class="metric-bar-fill" style="width:94.1%;background:var(--heat-1);"></div></div>
+            </div>
+            <div class="metric-bar-wrap">
+              <div class="metric-bar-header"><span class="metric-bar-label">ROC-AUC</span><span class="metric-bar-value">0.971</span></div>
+              <div class="metric-bar-track"><div class="metric-bar-fill" style="width:97.1%;background:var(--heat-1);"></div></div>
+            </div>
+          </span>
+          <span class="mod-tile-cta"><span class="cta-off">View details &#8595;</span><span class="cta-on">Showing below &#8595;</span></span>
+        </label>
+        <label class="mod-tile" for="mod-lsd" style="--mc:var(--leaf); background:rgba(77,124,15,0.06); border-color:rgba(77,124,15,0.18);">
+          <span class="mod-tile-top">
+            <span class="module-title">Lumpy Skin Disease</span>
+            <span class="mod-tile-check" aria-hidden="true">&#10003;</span>
+          </span>
+          <span class="module-owner">Manathunga M. A. A. S. &middot; IT22282422</span>
+          <span class="module-desc">Finds skin nodules with YOLOv8s, checks them with a ResNet50 classifier and combines the photo result with clinical signs.</span>
+          <span class="module-chips">
+            <span class="chip chip-leaf">YOLOv8s</span>
+            <span class="chip chip-leaf">ResNet50</span>
+            <span class="chip chip-leaf">70 / 30 fusion</span>
+          </span>
+          <span class="module-metrics">
+            <div class="metric-bar-wrap">
+              <div class="metric-bar-header"><span class="metric-bar-label">Classifier accuracy</span><span class="metric-bar-value">93.10%</span></div>
+              <div class="metric-bar-track"><div class="metric-bar-fill" style="width:93.1%;background:var(--leaf);"></div></div>
+            </div>
+            <div class="metric-bar-wrap">
+              <div class="metric-bar-header"><span class="metric-bar-label">ROC-AUC</span><span class="metric-bar-value">0.9637</span></div>
+              <div class="metric-bar-track"><div class="metric-bar-fill" style="width:96.37%;background:var(--leaf);"></div></div>
+            </div>
+          </span>
+          <span class="mod-tile-cta"><span class="cta-off">View details &#8595;</span><span class="cta-on">Showing below &#8595;</span></span>
+        </label>
+        <label class="mod-tile" for="mod-milk-fever" style="--mc:var(--heat-2); background:rgba(239,68,68,0.05); border-color:rgba(239,68,68,0.15);">
+          <span class="mod-tile-top">
+            <span class="module-title">Milk Fever</span>
+            <span class="mod-tile-check" aria-hidden="true">&#10003;</span>
+          </span>
+          <span class="module-owner">Udawaththa M. P. A. M. &middot; IT22221728</span>
+          <span class="module-desc">A Random Forest and XGBoost ensemble stages milk fever risk around calving from simple herd information.</span>
+          <span class="module-chips">
+            <span class="chip chip-rose">Random Forest</span>
+            <span class="chip chip-rose">XGBoost</span>
+            <span class="chip chip-rose">Soft voting</span>
+            <span class="chip chip-rose">THI</span>
+          </span>
+          <span class="module-metrics">
+            <div class="metric-bar-wrap">
+              <div class="metric-bar-header"><span class="metric-bar-label">Accuracy</span><span class="metric-bar-value">97.04%</span></div>
+              <div class="metric-bar-track"><div class="metric-bar-fill" style="width:97.04%;background:var(--heat-2);"></div></div>
+            </div>
+            <div class="metric-bar-wrap">
+              <div class="metric-bar-header"><span class="metric-bar-label">ROC-AUC</span><span class="metric-bar-value">0.9986</span></div>
+              <div class="metric-bar-track"><div class="metric-bar-fill" style="width:99.86%;background:var(--heat-2);"></div></div>
+            </div>
+          </span>
+          <span class="mod-tile-cta"><span class="cta-off">View details &#8595;</span><span class="cta-on">Showing below &#8595;</span></span>
+        </label>
+      </div>
+
+      <div class="mod-panels">
+        <div class="mod-panel" id="panel-mod-mastitis" style="--mc:var(--primary);">
+          <div class="mod-panel-head">
+            <div>
+              <p class="mod-panel-kicker" style="color:var(--primary);">Module details</p>
+              <h3 class="mod-panel-title">Mastitis</h3>
+            </div>
+            <span class="module-owner">Perera L. C. C. &middot; IT22153036</span>
+          </div>
+          <div class="metric-readouts">
+              <div class="metric-readout"><div class="metric-readout-value" style="color:var(--primary);">87.01%</div><div class="metric-readout-label">Image model accuracy</div></div>
+              <div class="metric-readout"><div class="metric-readout-value" style="color:var(--primary);">0.9376</div><div class="metric-readout-label">Image ROC-AUC</div></div>
+              <div class="metric-readout"><div class="metric-readout-value" style="color:var(--primary);">99.38%</div><div class="metric-readout-label">Biomarker model accuracy</div></div>
+          </div>
+          <div class="module-details-grid">
+            <div class="detail-block">
+              <p class="detail-block-title" style="color:var(--primary);">What the farmer provides</p>
+              <ul>
+                  <li><span class="detail-block-dot" style="background:var(--primary);"></span>Udder photograph (phone camera)</li>
+                  <li><span class="detail-block-dot" style="background:var(--primary);"></span>Milk temperature and pH</li>
+                  <li><span class="detail-block-dot" style="background:var(--primary);"></span>Electrical conductivity</li>
+                  <li><span class="detail-block-dot" style="background:var(--primary);"></span>Milk yield and clotting</li>
+                  <li><span class="detail-block-dot" style="background:var(--primary);"></span>Symptom checklist</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <p class="detail-block-title" style="color:var(--primary);">How it decides</p>
+              <p class="detail-block-text">A ResNet50 model classifies the udder photo and a decision tree scores the five milk biomarkers. The two probabilities are averaged (soft voting) and the symptom checklist is blended in with a 15% weight. Results within 0.15 of the decision line are marked borderline, and every positive case gets a severity stage.</p>
+            </div>
+            <div class="detail-block">
+              <p class="detail-block-title" style="color:var(--primary);">What the farmer gets back</p>
+              <ul>
+                  <li><span class="detail-block-dot" style="background:var(--primary);"></span>Mastitis or normal result</li>
+                  <li><span class="detail-block-dot" style="background:var(--primary);"></span>Severity: Mild, Moderate or Severe</li>
+                  <li><span class="detail-block-dot" style="background:var(--primary);"></span>Grad-CAM heatmap on the photo</li>
+                  <li><span class="detail-block-dot" style="background:var(--primary);"></span>Guidance and PDF report (English / Sinhala)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mod-panel" id="panel-mod-fmd" style="--mc:var(--heat-1);">
+          <div class="mod-panel-head">
+            <div>
+              <p class="mod-panel-kicker" style="color:var(--heat-1);">Module details</p>
+              <h3 class="mod-panel-title">Foot and Mouth Disease</h3>
+            </div>
+            <span class="module-owner">Sudasinghe D. D. &middot; IT22129512</span>
+          </div>
+          <div class="metric-readouts">
+              <div class="metric-readout"><div class="metric-readout-value" style="color:var(--heat-1);">94.1%</div><div class="metric-readout-label">Accuracy</div></div>
+              <div class="metric-readout"><div class="metric-readout-value" style="color:var(--heat-1);">0.971</div><div class="metric-readout-label">ROC-AUC</div></div>
+              <div class="metric-readout"><div class="metric-readout-value" style="color:var(--heat-1);">96.2%</div><div class="metric-readout-label">FMD recall</div></div>
+          </div>
+          <div class="module-details-grid">
+            <div class="detail-block">
+              <p class="detail-block-title" style="color:var(--heat-1);">What the farmer provides</p>
+              <ul>
+                  <li><span class="detail-block-dot" style="background:var(--heat-1);"></span>Photo of mouth, tongue, hoof or teat</li>
+                  <li><span class="detail-block-dot" style="background:var(--heat-1);"></span>Body temperature</li>
+                  <li><span class="detail-block-dot" style="background:var(--heat-1);"></span>Clinical signs checklist</li>
+                  <li><span class="detail-block-dot" style="background:var(--heat-1);"></span>District (for weather data)</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <p class="detail-block-title" style="color:var(--heat-1);">How it decides</p>
+              <p class="detail-block-text">EfficientNetB0 classifies the lesion photo. Clinical rules score the reported signs, and live Open-Meteo weather for the district, with a seasonal rule for December to February, gives an environmental risk. The three are combined into one assessment.</p>
+            </div>
+            <div class="detail-block">
+              <p class="detail-block-title" style="color:var(--heat-1);">What the farmer gets back</p>
+              <ul>
+                  <li><span class="detail-block-dot" style="background:var(--heat-1);"></span>Image result with confidence</li>
+                  <li><span class="detail-block-dot" style="background:var(--heat-1);"></span>Clinical and environmental risk</li>
+                  <li><span class="detail-block-dot" style="background:var(--heat-1);"></span>Combined FMD assessment</li>
+                  <li><span class="detail-block-dot" style="background:var(--heat-1);"></span>Weather view and PDF report (English / Sinhala)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mod-panel" id="panel-mod-lsd" style="--mc:var(--leaf);">
+          <div class="mod-panel-head">
+            <div>
+              <p class="mod-panel-kicker" style="color:var(--leaf);">Module details</p>
+              <h3 class="mod-panel-title">Lumpy Skin Disease</h3>
+            </div>
+            <span class="module-owner">Manathunga M. A. A. S. &middot; IT22282422</span>
+          </div>
+          <div class="metric-readouts">
+              <div class="metric-readout"><div class="metric-readout-value" style="color:var(--leaf);">93.10%</div><div class="metric-readout-label">Classifier accuracy</div></div>
+              <div class="metric-readout"><div class="metric-readout-value" style="color:var(--leaf);">0.9637</div><div class="metric-readout-label">ROC-AUC</div></div>
+              <div class="metric-readout"><div class="metric-readout-value" style="color:var(--leaf);">48 / 49</div><div class="metric-readout-label">LSD cases caught</div></div>
+          </div>
+          <div class="module-details-grid">
+            <div class="detail-block">
+              <p class="detail-block-title" style="color:var(--leaf);">What the farmer provides</p>
+              <ul>
+                  <li><span class="detail-block-dot" style="background:var(--leaf);"></span>Skin or body photograph</li>
+                  <li><span class="detail-block-dot" style="background:var(--leaf);"></span>Swollen lymph nodes, high fever</li>
+                  <li><span class="detail-block-dot" style="background:var(--leaf);"></span>Reduced milk, reduced appetite</li>
+                  <li><span class="detail-block-dot" style="background:var(--leaf);"></span>Nasal and eye discharge</li>
+                  <li><span class="detail-block-dot" style="background:var(--leaf);"></span>Body temperature</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <p class="detail-block-title" style="color:var(--leaf);">How it decides</p>
+              <p class="detail-block-text">YOLOv8s marks the nodules on the photo and ResNet50 classifies the image. The photo result counts for 70% and the weighted symptom checklist for 30% of the final probability, which is shown as Low (below 30), Moderate (30 to 70) or High (70 and above) risk.</p>
+            </div>
+            <div class="detail-block">
+              <p class="detail-block-title" style="color:var(--leaf);">What the farmer gets back</p>
+              <ul>
+                  <li><span class="detail-block-dot" style="background:var(--leaf);"></span>LSD probability and risk level</li>
+                  <li><span class="detail-block-dot" style="background:var(--leaf);"></span>Nodules marked on the photo</li>
+                  <li><span class="detail-block-dot" style="background:var(--leaf);"></span>Share of photo and symptoms in the result</li>
+                  <li><span class="detail-block-dot" style="background:var(--leaf);"></span>PDF report (English / Sinhala)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mod-panel" id="panel-mod-milk-fever" style="--mc:var(--heat-2);">
+          <div class="mod-panel-head">
+            <div>
+              <p class="mod-panel-kicker" style="color:var(--heat-2);">Module details</p>
+              <h3 class="mod-panel-title">Milk Fever</h3>
+            </div>
+            <span class="module-owner">Udawaththa M. P. A. M. &middot; IT22221728</span>
+          </div>
+          <div class="metric-readouts">
+              <div class="metric-readout"><div class="metric-readout-value" style="color:var(--heat-2);">97.04%</div><div class="metric-readout-label">Accuracy</div></div>
+              <div class="metric-readout"><div class="metric-readout-value" style="color:var(--heat-2);">0.9986</div><div class="metric-readout-label">ROC-AUC</div></div>
+              <div class="metric-readout"><div class="metric-readout-value" style="color:var(--heat-2);">93.97%</div><div class="metric-readout-label">Critical-stage recall</div></div>
+          </div>
+          <div class="module-details-grid">
+            <div class="detail-block">
+              <p class="detail-block-title" style="color:var(--heat-2);">What the farmer provides</p>
+              <ul>
+                  <li><span class="detail-block-dot" style="background:var(--heat-2);"></span>Parity and body condition score</li>
+                  <li><span class="detail-block-dot" style="background:var(--heat-2);"></span>Calving date</li>
+                  <li><span class="detail-block-dot" style="background:var(--heat-2);"></span>First-day milk yield</li>
+                  <li><span class="detail-block-dot" style="background:var(--heat-2);"></span>Activity level</li>
+                  <li><span class="detail-block-dot" style="background:var(--heat-2);"></span>Symptom checklist</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <p class="detail-block-title" style="color:var(--heat-2);">How it decides</p>
+              <p class="detail-block-text">Random Forest and XGBoost vote on the stage (subclinical, mild, moderate or critical). The result becomes a 0 to 100 risk score (0-24, 25-49, 50-69, 70-100), and hot, humid weather (THI) can add up to 15 points. The dataset has 8,783 records, and 1,757 of them were kept aside for testing.</p>
+            </div>
+            <div class="detail-block">
+              <p class="detail-block-title" style="color:var(--heat-2);">What the farmer gets back</p>
+              <ul>
+                  <li><span class="detail-block-dot" style="background:var(--heat-2);"></span>Milk fever stage and risk score</li>
+                  <li><span class="detail-block-dot" style="background:var(--heat-2);"></span>Main risk factors</li>
+                  <li><span class="detail-block-dot" style="background:var(--heat-2);"></span>Nutrition and management advice</li>
+                  <li><span class="detail-block-dot" style="background:var(--heat-2);"></span>Urgent warning for critical cases, PDF report</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       MILESTONES SECTION
+       ========================================================= -->
+  <section id="milestones" class="section-py">
+    <div class="content-width">
+      <div class="reveal">
+        <p class="eyebrow">04 / MILESTONES</p>
+        <h2 class="section-title" style="margin-bottom:48px;">Project Timeline</h2>
+      </div>
+      <div class="timeline-wrapper" id="timeline-section">
+        <div class="timeline-line" aria-hidden="true">
+          <div class="timeline-fill"></div>
+        </div>
+        <ol class="timeline-list" aria-label="Project milestones">
+
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">01</span></div>
+            <div class="timeline-item-left">
+              <div class="timeline-card reveal">
+                <div class="timeline-card-title">Project Proposal</div>
+                <div class="timeline-status-row timeline-status-end"><span class="chip chip-completed"><span class="chip-dot dot-green"></span>Completed</span></div>
+                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-end"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">March 2026</span></div></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">02</span></div>
+            <div class="timeline-item-right">
+              <div class="timeline-card reveal">
+                <div class="timeline-card-title">Progress Presentation 1</div>
+                <div class="timeline-status-row timeline-status-start"><span class="chip chip-completed"><span class="chip-dot dot-green"></span>Completed</span></div>
+                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-start"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">May 2026</span></div></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">03</span></div>
+            <div class="timeline-item-left">
+              <div class="timeline-card reveal">
+                <div class="timeline-card-title">Progress Presentation 2</div>
+                <div class="timeline-status-row timeline-status-end"><span class="chip chip-completed"><span class="chip-dot dot-green"></span>Completed</span></div>
+                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-end"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">August 2026</span></div></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">04</span></div>
+            <div class="timeline-item-right">
+              <div class="timeline-card reveal">
+                <div class="timeline-card-title">Research Paper</div>
+                <div class="timeline-status-row timeline-status-start"><span class="chip chip-completed"><span class="chip-dot dot-green"></span>Completed</span></div>
+                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-start"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">August 2026</span></div></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">05</span></div>
+            <div class="timeline-item-left">
+              <div class="timeline-card reveal">
+                <div class="timeline-card-title">Final Presentation and Viva</div>
+                <div class="timeline-status-row timeline-status-end"><span class="chip chip-pending"><span class="chip-dot dot-amber"></span>Pending</span></div>
+                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-end"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">October 2026 <span class="timeline-expected-badge">Expected</span></span></div></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">06</span></div>
+            <div class="timeline-item-right">
+              <div class="timeline-card reveal">
+                <div class="timeline-card-title">Final Report</div>
+                <div class="timeline-status-row timeline-status-start"><span class="chip chip-pending"><span class="chip-dot dot-amber"></span>Pending</span></div>
+                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-start"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">October 2026 <span class="timeline-expected-badge">Expected</span></span></div></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-label">07</span></div>
+            <div class="timeline-item-left">
+              <div class="timeline-card reveal">
+                <div class="timeline-card-title">Website</div>
+                <div class="timeline-status-row timeline-status-end"><span class="chip chip-pending"><span class="chip-dot dot-amber"></span>Pending</span></div>
+                <div class="timeline-meta"><div class="timeline-meta-row timeline-meta-end"><span class="timeline-meta-label">Date:</span><span class="timeline-meta-value">October 2026 <span class="timeline-expected-badge">Expected</span></span></div></div>
+              </div>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       DOCUMENTS SECTION
+       ========================================================= -->
+  <section id="documents" class="section-py">
+    <div class="content-width">
+      <div class="reveal">
+        <p class="eyebrow">05 / DOCUMENTS</p>
+        <h2 class="section-title" style="margin-bottom:40px;">Project Documents</h2>
+      </div>
+      <div class="docs-grid">
+
+        <div class="file-card file-card-available reveal">
+          <div class="file-card-body">
+            <div class="file-icon" style="background:rgba(239,68,68,0.08);color:var(--heat-2);">📄</div>
+            <div>
+              <div class="file-title">Project Charter</div>
+              <div class="file-badges">
+                <span class="file-badge" style="background:rgba(239,68,68,0.08);color:var(--heat-2);">PDF</span>
+                <span class="file-badge" style="background:var(--surface-2);color:var(--ink-muted);">20.5 MB</span>
+                <span class="chip chip-completed" style="font-size:0.65rem;padding:2px 6px;"><span class="chip-dot dot-green"></span>Available</span>
+              </div>
+              <p class="file-desc">Topic Assessment Form (TAF) with the scope, objectives and plan of the project.</p>
+            </div>
+          </div>
+          <a href="PASTE_DRIVE_LINK_TAF" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="download-project-charter">Open on Drive &#8599;</a>
+        </div>
+
+        <div class="file-card file-card-available reveal">
+          <div class="file-card-body">
+            <div class="file-icon" style="background:rgba(245,158,11,0.08);color:var(--heat-1);">📄</div>
+            <div>
+              <div class="file-title">Proposal Documents</div>
+              <div class="file-badges">
+                <span class="file-badge" style="background:rgba(245,158,11,0.08);color:var(--heat-1);">ZIP</span>
+                <span class="file-badge" style="background:var(--surface-2);color:var(--ink-muted);">3.6 MB</span>
+                <span class="chip chip-completed" style="font-size:0.65rem;padding:2px 6px;"><span class="chip-dot dot-green"></span>Available</span>
+              </div>
+              <p class="file-desc">Individual proposal reports submitted to the faculty.</p>
+            </div>
+          </div>
+          <a href="https://drive.google.com/file/d/16qTwvDtdTjCY6WZz8SYU05dT6SJ5U4P2/view?usp=share_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="download-proposal-documents">Open on Drive &#8599;</a>
+        </div>
+
+        <div class="file-card file-card-pending reveal">
+          <div class="file-card-body">
+            <div class="file-icon" style="background:rgba(245,158,11,0.08);color:var(--heat-1);">📄</div>
+            <div>
+              <div class="file-title">Checklist Documents</div>
+              <div class="file-badges">
+                <span class="file-badge" style="background:rgba(245,158,11,0.08);color:var(--heat-1);">ZIP</span>
+                <span class="chip chip-pending" style="font-size:0.65rem;padding:2px 6px;"><span class="chip-dot dot-amber"></span>Pending</span>
+              </div>
+              <p class="file-desc">Checklists submitted with each milestone.</p>
+            </div>
+          </div>
+          <button class="btn btn-ghost" disabled id="download-checklist-documents">Pending</button>
+        </div>
+
+        <div class="file-card file-card-pending reveal">
+          <div class="file-card-body">
+            <div class="file-icon" style="background:rgba(245,158,11,0.08);color:var(--heat-1);">📄</div>
+            <div>
+              <div class="file-title">Final Reports</div>
+              <div class="file-badges">
+                <span class="file-badge" style="background:rgba(245,158,11,0.08);color:var(--heat-1);">ZIP</span>
+                <span class="chip chip-pending" style="font-size:0.65rem;padding:2px 6px;"><span class="chip-dot dot-amber"></span>Pending</span>
+              </div>
+              <p class="file-desc">Common final report and the four individual final theses.</p>
+            </div>
+          </div>
+          <button class="btn btn-ghost" disabled id="download-final-reports">Pending</button>
+        </div>
+
+        <div class="file-card file-card-pending reveal">
+          <div class="file-card-body">
+            <div class="file-icon" style="background:rgba(239,68,68,0.08);color:var(--heat-2);">📄</div>
+            <div>
+              <div class="file-title">Research Paper</div>
+              <div class="file-badges">
+                <span class="file-badge" style="background:rgba(239,68,68,0.08);color:var(--heat-2);">PDF</span>
+                <span class="chip chip-pending" style="font-size:0.65rem;padding:2px 6px;"><span class="chip-dot dot-amber"></span>Pending</span>
+              </div>
+              <p class="file-desc">Group research paper on the CattleSense platform.</p>
+            </div>
+          </div>
+          <button class="btn btn-ghost" disabled id="download-research-paper">Pending</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PRESENTATIONS SECTION
+       ========================================================= -->
+  <section id="presentations" class="section-py">
+    <div class="content-width">
+      <div class="reveal">
+        <p class="eyebrow">06 / PRESENTATIONS</p>
+        <h2 class="section-title" style="margin-bottom:40px;">Presentations</h2>
+      </div>
+      <div class="presentations-list">
+
+        <div class="file-card file-card-available file-card-wide reveal">
+          <div class="file-card-body">
+            <div class="file-icon" style="background:rgba(15,118,110,0.1);color:var(--primary);width:48px;height:48px;">📊</div>
+            <div style="flex:1;min-width:0;">
+              <div class="file-title">Proposal Presentation</div>
+              <div class="file-badges">
+                <span class="file-badge" style="background:rgba(15,118,110,0.1);color:var(--primary);">PPTX</span>
+                <span class="file-badge" style="background:var(--surface-2);color:var(--ink-muted);">128 MB</span>
+                <span class="chip chip-completed" style="font-size:0.65rem;padding:2px 6px;"><span class="chip-dot dot-green"></span>Available</span>
+              </div>
+              <p class="file-desc">Initial research proposal presented to the panel (R26-IT-045).</p>
+            </div>
+          </div>
+          <div class="file-action">
+            <a href="https://docs.google.com/presentation/d/1WpJDcN_bNjyucea6eE3QkMEF22TTZfJN/edit?usp=share_link&amp;ouid=104952769737514018470&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="download-proposal-presentation">Open on Drive &#8599;</a>
+          </div>
+        </div>
+
+        <div class="file-card file-card-available file-card-wide reveal">
+          <div class="file-card-body">
+            <div class="file-icon" style="background:rgba(15,118,110,0.1);color:var(--primary);width:48px;height:48px;">📊</div>
+            <div style="flex:1;min-width:0;">
+              <div class="file-title">Progress Presentation 1</div>
+              <div class="file-badges">
+                <span class="file-badge" style="background:rgba(15,118,110,0.1);color:var(--primary);">PPTX</span>
+                <span class="file-badge" style="background:var(--surface-2);color:var(--ink-muted);">55 MB</span>
+                <span class="chip chip-completed" style="font-size:0.65rem;padding:2px 6px;"><span class="chip-dot dot-green"></span>Available</span>
+              </div>
+              <p class="file-desc">First progress review: datasets, first models and early results (R26-IT-045).</p>
+            </div>
+          </div>
+          <div class="file-action">
+            <a href="https://docs.google.com/presentation/d/1dQJce1b8cEhIYHd48GgRLtmNuER0GMxZ/edit?usp=share_link&amp;ouid=104952769737514018470&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="download-progress-presentation-1">Open on Drive &#8599;</a>
+          </div>
+        </div>
+
+        <div class="file-card file-card-available file-card-wide reveal">
+          <div class="file-card-body">
+            <div class="file-icon" style="background:rgba(15,118,110,0.1);color:var(--primary);width:48px;height:48px;">📊</div>
+            <div style="flex:1;min-width:0;">
+              <div class="file-title">Progress Presentation 2</div>
+              <div class="file-badges">
+                <span class="file-badge" style="background:rgba(15,118,110,0.1);color:var(--primary);">PPTX</span>
+                <span class="file-badge" style="background:var(--surface-2);color:var(--ink-muted);">53 MB</span>
+                <span class="chip chip-completed" style="font-size:0.65rem;padding:2px 6px;"><span class="chip-dot dot-green"></span>Available</span>
+              </div>
+              <p class="file-desc">Second progress review: final models and the integrated platform (R26-IT-045).</p>
+            </div>
+          </div>
+          <div class="file-action">
+            <a href="https://docs.google.com/presentation/d/1wGiLvDIalBc7jC5flMiSB3EN6HMmHB-r/edit?usp=share_link&amp;ouid=104952769737514018470&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="download-progress-presentation-2">Open on Drive &#8599;</a>
+          </div>
+        </div>
+
+        <div class="file-card file-card-pending file-card-wide reveal">
+          <div class="file-card-body">
+            <div class="file-icon" style="background:rgba(239,68,68,0.08);color:var(--heat-2);width:48px;height:48px;">📊</div>
+            <div style="flex:1;min-width:0;">
+              <div class="file-title">Final Presentation</div>
+              <div class="file-badges">
+                <span class="file-badge" style="background:rgba(239,68,68,0.08);color:var(--heat-2);">PDF</span>
+                <span class="chip chip-pending" style="font-size:0.65rem;padding:2px 6px;"><span class="chip-dot dot-amber"></span>Pending</span>
+              </div>
+              <p class="file-desc">Final viva presentation covering the complete CattleSense system.</p>
+            </div>
+          </div>
+          <div class="file-action">
+            <button class="btn btn-ghost" disabled id="download-final-presentation">Pending</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TEAM SECTION
+       ========================================================= -->
+  <section id="team" class="section-py topo-bg">
+    <div class="content-width">
+      <div class="reveal">
+        <p class="eyebrow">07 / ABOUT US</p>
+        <h2 class="section-title" style="margin-bottom:40px;">Research Team</h2>
+      </div>
+
+      <!-- Supervisors -->
+      <p class="team-section-label">Supervisors</p>
+      <div class="supervisors-grid">
+        <div class="supervisor-card reveal">
+          <div class="supervisor-avatar">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="12" r="6" fill="var(--primary)" opacity="0.7"/>
+              <path d="M6 28 C6 22 10 18 16 18 C22 18 26 22 26 28" stroke="var(--primary)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="supervisor-role">Supervisor</span>
+          <div class="supervisor-name">Dr. Prasanna Sumathipala</div>
+          <div class="supervisor-title">Dean/Academic</div>
+          <div class="supervisor-dept">Department of Information Technology, Faculty of Computing, Sri Lanka Institute of Information Technology, Matara, Sri Lanka</div>
+          <div class="supervisor-email-row">
+            <span style="color:var(--ink-muted);">✉</span>
+            <a href="mailto:prasanna.s@sliit.lk">prasanna.s@sliit.lk</a>
+          </div>
+        </div>
+
+        <div class="supervisor-card reveal">
+          <div class="supervisor-avatar">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="12" r="6" fill="var(--primary)" opacity="0.7"/>
+              <path d="M6 28 C6 22 10 18 16 18 C22 18 26 22 26 28" stroke="var(--primary)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="supervisor-role">Co-supervisor</span>
+          <div class="supervisor-name">Ms. Thilini Jayalath</div>
+          <div class="supervisor-title">Senior Lecturer</div>
+          <div class="supervisor-dept">Department of Information Technology, Faculty of Computing, Sri Lanka Institute of Information Technology, Malabe, Sri Lanka</div>
+          <div class="supervisor-email-row">
+            <span style="color:var(--ink-muted);">✉</span>
+            <a href="mailto:thilini.j@sliit.lk">thilini.j@sliit.lk</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Members -->
+      <p class="team-section-label">Project Members</p>
+      <div class="team-grid">
+
+        <div class="member-card reveal">
+          <div>
+            <div class="member-photo-wrap">
+              <img src="assets/images/team/it22153036.jpeg" alt="Portrait of Perera L. C. C." loading="lazy" />
+              <div class="member-monogram" style="background:linear-gradient(135deg,#0F766E,#2DD4BF);">PC</div>
+            </div>
+            <span class="member-component" style="background:rgba(15,118,110,0.12);color:var(--primary);">Mastitis Detection</span>
+            <div class="member-name">Perera L. C. C.</div>
+            <div class="member-email-row">
+              <span>✉</span>
+              <a href="mailto:lccperera2002@gmail.com">lccperera2002@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card reveal">
+          <div>
+            <div class="member-photo-wrap">
+              <img src="assets/images/team/it22129512.jpeg" alt="Portrait of Sudasinghe D. D." loading="lazy" />
+              <div class="member-monogram" style="background:linear-gradient(135deg,#B45309,#F59E0B);">SD</div>
+            </div>
+            <span class="member-component" style="background:rgba(245,158,11,0.1);color:var(--heat-1);">FMD Detection</span>
+            <div class="member-name">Sudasinghe D. D.</div>
+            <div class="member-email-row">
+              <span>✉</span>
+              <a href="mailto:ddsudasinghe@gmail.com">ddsudasinghe@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card reveal">
+          <div>
+            <div class="member-photo-wrap">
+              <img src="assets/images/team/it22282422.jpeg" alt="Portrait of Manathunga M. A. A. S." loading="lazy" />
+              <div class="member-monogram" style="background:linear-gradient(135deg,#365314,#4D7C0F);">MM</div>
+            </div>
+            <span class="member-component" style="background:rgba(77,124,15,0.1);color:var(--leaf);">LSD Detection</span>
+            <div class="member-name">Manathunga M. A. A. S.</div>
+            <div class="member-email-row">
+              <span>✉</span>
+              <a href="mailto:shehara314@gmail.com">shehara314@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card reveal">
+          <div>
+            <div class="member-photo-wrap">
+              <img src="assets/images/team/it22221728.jpeg" alt="Portrait of Udawaththa M. P. A. M." loading="lazy" />
+              <div class="member-monogram" style="background:linear-gradient(135deg,#991B1B,#EF4444);">UM</div>
+            </div>
+            <span class="member-component" style="background:rgba(239,68,68,0.08);color:var(--heat-2);">Milk Fever Detection</span>
+            <div class="member-name">Udawaththa M. P. A. M.</div>
+            <div class="member-email-row">
+              <span>✉</span>
+              <a href="mailto:udawaththaminol@gmail.com">udawaththaminol@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CONTACT SECTION
+       ========================================================= -->
+  <section id="contact" class="section-py">
+    <div class="content-width">
+      <div class="reveal">
+        <p class="eyebrow">08 / CONTACT</p>
+        <h2 class="section-title" style="margin-bottom:40px;">Get in Touch</h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: contact info -->
+        <div class="reveal">
+          <div class="contact-info-list">
+            <div class="contact-info-card">
+              <div class="contact-icon-wrap" style="background:rgba(15,118,110,0.1);color:var(--primary);">✉</div>
+              <div>
+                <p class="contact-info-label">Group Email</p>
+                <a href="mailto:cattlesenselk@gmail.com" class="contact-info-value">cattlesenselk@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-icon-wrap" style="background:rgba(245,158,11,0.1);color:var(--heat-1);">📞</div>
+              <div>
+                <p class="contact-info-label">Phone</p>
+                <a href="tel:+94765811252" class="contact-info-value">+94 76 581 1252</a>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-icon-wrap" style="background:rgba(77,124,15,0.1);color:var(--leaf);">📍</div>
+              <div>
+                <p class="contact-info-label">Address</p>
+                <address class="contact-info-value" style="font-style:normal;font-family:var(--font-sans);">
+                  Sri Lanka Institute of Information Technology,<br/>Malabe,<br/>Sri Lanka.
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: contact form -->
+        <div class="reveal">
+          <form class="contact-form" id="contact-form" aria-label="Contact form" action="mailto:cattlesenselk@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your full name" required />
+              <p class="form-error">&#9888; Name is required</p>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="your@email.com" required />
+              <p class="form-error">&#9888; Valid email is required</p>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" class="form-textarea" rows="5" placeholder="Your message (at least 10 characters)" required minlength="10"></textarea>
+              <p class="form-error">&#9888; Message must be at least 10 characters</p>
+            </div>
+            <p class="form-note">Pressing send opens your email app with this message addressed to the group.</p>
+            <button type="submit" class="btn btn-primary btn-full" id="contact-submit">Send message <span class="btn-mail" aria-hidden="true">&#9993;</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer>
+  <div class="content-width footer-inner">
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="footer-logo">
+          <img src="cs-logo.png" alt="CattleSense logo" class="footer-logo-img" />
+          <span class="footer-logo-text">Cattle<span>Sense</span></span>
+        </a>
+        <p class="footer-tagline">Machine Learning Based Early Detection of Cattle Diseases</p>
+      </div>
+      <div>
+        <p class="footer-col-label">Quick Links</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a class="footer-link" href="#domain">Domain</a>
+          <a class="footer-link" href="#modules">Modules</a>
+          <a class="footer-link" href="#milestones">Milestones</a>
+          <a class="footer-link" href="#documents">Documents</a>
+          <a class="footer-link" href="#presentations">Presentations</a>
+          <a class="footer-link" href="#team">Team</a>
+          <a class="footer-link" href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer-col-label">Live System</p>
+        <a href="https://cattlesensesl.vercel.app/" target="_blank" rel="noopener noreferrer" class="footer-live-link">
+          cattlesensesl.vercel.app ↗
+        </a>
+        <p class="footer-live-desc">Access the live CattleSense platform for Sri Lankan dairy farmers.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy" id="footer-copy">© 2026 CattleSense</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
